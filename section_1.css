@@ -1,0 +1,25 @@
+/* section_1.css */
+
+.content-wrapper-1 {
+    opacity: 0;
+    transform: translateY(1.25em);
+    transition: opacity 1s ease, transform 0.5s ease;
+    color: white; /* Added white text color */
+}
+
+.section-1.loaded .content-wrapper-1 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Example styling of the h1 inside the section */
+.section-1 h1 {
+    font-size: 3em;
+    text-align: center;
+}
+
+/* Example styling of the p inside the section */
+.section-1 p {
+    font-size: 1.2em;
+    text-align: center;
+}

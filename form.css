@@ -1,0 +1,72 @@
+form {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 10px;
+padding: 15px; /* Apply equal padding on all sides */
+width: 80%; /* Adjust width to be relative to the body */
+box-sizing: border-box; /* Ensure padding is included in width calculation */
+max-width: 500px; /* Limit maximum width */
+border: 2px solid rgba(255, 255, 255, 0.2);
+border-radius: 25px;
+background: rgba(36, 36, 36, 0.438); /* Semi-transparent background */
+backdrop-filter: blur(10px); /* Apply 50% blur effect */
+-webkit-backdrop-filter: blur(10px); /* Safari compatibility */
+}
+
+form > * {
+margin: 0; /* Remove any extra margin from children */
+width: 80%; /* Ensure child elements do not exceed form width */
+}
+
+  .text_area {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 15px;
+    height: 6em;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  .text_area:focus {
+    outline: none;
+    border-color: #56c0e8;
+    background-color: #444;
+  }
+  canvas {
+    border-radius: 15px;
+    width: 100%;
+    border: 2px solid #444;
+    background-color: #222;
+  }
+  .button_form {
+    border-radius: 15px;
+    font-family: 'MainFont', Arial, sans-serif;
+    padding: 10px 20px;
+    font-size: 1em;
+    width: 100%;
+    cursor: not-allowed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, border-width 0.5s ease;
+    background-color: #ff6f6f8a;
+    color: #999999;
+    border-style: solid; /* Important: Set a border-style */
+    border-width: 0px; /* Start with 0 width */
+    border-color: transparent; /* Start with transparent color */
+}
+
+.button_form:enabled {
+    background-color: rgba(114, 114, 114, 0.5);
+    border-color: white;
+    border-width: 1px;
+    color: white;
+    cursor: pointer;
+}
+
+.button_form:enabled:hover {
+    background-color: rgba(114, 114, 114, 0.7);
+}

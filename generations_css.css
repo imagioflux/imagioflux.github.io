@@ -1,0 +1,106 @@
+/* Modal content */
+.generations_modal_content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 1em;
+  width: auto; /* Let the width adjust to the content */
+  max-width: 30em; /* Maximum width limit */
+  max-height: 35em; /* Maximum height limit */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px); /* Apply the blur effect */
+  -webkit-backdrop-filter: blur(5px); /* Safari support */
+  position: relative; /* To handle positioning inside the modal container */
+  animation: scaleIn 0.2s ease-in-out; /* Scaling animation */
+  transform-origin: center center; /* Scaling origin for smooth effect */
+}
+
+/* Modal content styles */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center */
+  align-items: center; /* Horizontally center */
+  position: relative;
+  padding: 1em;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Image container styles */
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 20em; /* Limit the width of the image container */
+  height: auto;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  margin-bottom: 0.5em; /* Equal space below image container */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+/* Ensure the image fills the container */
+.image-container img {
+  width: 100%;
+  height: auto;
+  backface-visibility: hidden;
+  display: block;
+}
+
+/* Flip effect for image container */
+.image-container.flipped {
+  transform: rotateY(180deg);
+}
+
+.image-container .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em;
+  font-size: 1em;
+  text-align: center;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  overflow-y: auto;
+}
+
+/* Button styles */
+.flip-button, .next-button {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  border: 1px solid #fff;
+  border-radius: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  text-align: center;
+  pointer-events: auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Button width matches the image container */
+  max-width: 25em; /* Limit the width of the buttons */
+  margin: 0.5em 0; /* Equal margin for all buttons */
+}
+
+/* Hover effect for the buttons */
+.flip-button:hover, .next-button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Button click animation (shrinks when clicked) */
+.flip-button:active, .next-button:active {
+  transform: scale(0.9);
+}

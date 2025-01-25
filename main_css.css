@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'MainFont'; /* Give your font a name */
+    src: url('main_font.ttf') format('truetype'); /* Path to your font file */
+    font-weight: normal;
+    font-style: normal;
+}
+  
+body, html {
+    font-family: 'MainFont', Arial, sans-serif; /* Use the defined font */
+    height: 100%;
+    overflow-x: hidden;
+}
+
+section {
+    height: 100vh; /* Each section will take full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Section 1 with background image */
+.section-1 {
+    background-image: url('background_image_1.webp');
+    background-size: cover; /* Ensure the image covers the whole section */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    color: rgb(0, 0, 0);
+}
+
+.section-2 {
+    /* Ensure the section has a minimum height to trigger scrolling */
+    min-height: 100vh; /* Very important! */
+    background-image: url('background_image_2.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* Make text white for visibility against background */
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center;
+    align-items: center;
+}
+
+.section-3 {
+    /* Ensure the section has a minimum height to trigger scrolling */
+    min-height: 100vh; /* Very important! */
+    background-image: url('background_image_3.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* Make text white for visibility against background */
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center;
+    align-items: center;
+}
+
+.section-4 {
+    /* Ensure the section has a minimum height to trigger scrolling */
+    min-height: 100vh; /* Very important! */
+    background-image: url('background_image_4.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* Make text white for visibility against background */
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center;
+    align-items: center;
+}
+
+.section-5 {
+    /* Ensure the section has a minimum height to trigger scrolling */
+    min-height: 100vh; /* Very important! */
+    background-image: url('background_image_5.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* Make text white for visibility against background */
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center;
+    align-items: center;
+}
+
+.section-6 {
+    /* Ensure the section has a minimum height to trigger scrolling */
+    min-height: 100vh; /* Very important! */
+    background-image: url('background_image_6.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* Make text white for visibility against background */
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 4em; /* Responsive font size */
+    margin-bottom: 1em;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+/* Content should scale within the screen */
+.content {
+    width: 90%;
+    max-width: 45em;
+    padding: 0 2em;
+    box-sizing: border-box;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: linear-gradient(to right, rgba(56, 56, 56, 0) 0%, rgba(56, 56, 56, 1) 50%, rgba(56, 56, 56, 0) 100%);
+    font-size: 14px;
+    position: sticky;
+    top: 100%;
+    margin-top: auto;
+    width: 100%;
+}

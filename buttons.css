@@ -1,0 +1,24 @@
+/* main_button_type.css */
+.main_button_type {
+    background-color: rgba(41, 41, 41, 0.5); /* Translucent black with 50% opacity */
+    backdrop-filter: blur(5px); /* Blur effect */
+    -webkit-backdrop-filter: blur(5px); /* Safari support */
+    border: 1px solid white;
+    border-radius: 8px; /* Rounded corners */
+    color: white;
+    padding: 10px 20px; /* Adjust padding as needed */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Smooth transitions */
+    font-family: 'MainFont', Arial, sans-serif; /* Use the defined font */
+    font-size: 1em;
+    text-decoration: none; /* Remove default link underlines if used as an <a> */
+    display: inline-block; /* Helps with consistent sizing and layout */
+}
+
+.main_button_type:hover {
+    background-color: rgba(163, 163, 163, 0.4); /* Slightly brighter on hover */
+}
+
+.main_button_type:active {
+    transform: scale(0.85); /* Scale down on click */
+}

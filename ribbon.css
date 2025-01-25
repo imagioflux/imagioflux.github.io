@@ -1,0 +1,67 @@
+/* style.css */
+#ribbon {
+    position: fixed;
+    top: -2.5em;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+    color: white;
+    text-align: center;
+    padding: 0.5em 0;
+    z-index: 1000;
+    opacity: 0;
+    transition: top 0.5s ease, opacity 0.5s ease-in;
+    backdrop-filter: blur(5px); /* Apply the blur effect */
+    -webkit-backdrop-filter: blur(5px); /* Safari support */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+#ribbon.show {
+    top: 0;
+    opacity: 1;
+}
+
+#ribbon a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 0.5em 1em;
+    min-width: 8em;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+#ribbon a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+#ribbon a:hover {
+    color: lightgray;
+}
+
+#ribbon a:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #ribbon {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+    }
+    #ribbon a {
+        min-width: 100%;
+        padding: 0.5em;
+        box-sizing: border-box;
+    }
+}

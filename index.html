@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="imagio_flux_image_generator_icon.ico">
+    <title>Imagio Flux Image Generator</title>
+    <link rel="stylesheet" href="main_css.css">
+    <link rel="stylesheet" href="ribbon.css">
+    <link rel="stylesheet" href="section_1.css">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="section_main.css">
+    <link rel="stylesheet" href="generations_css.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="loader_style.css">
+</head>
+<body>
+    <script src="main.js" defer></script>
+    <script src="generations_script.js" defer></script>
+    <script src="generator_script.js" defer></script>
+    <div id="ribbon">
+        <a href="#generations">Generations</a>
+        <a href="#promptguide">Prompt Guide</a>
+        <a href="#aboutus">About Us</a>
+        <a href="#privacypolicy">Privacy Policy</a>
+        <a href="#aboutus">Contact Us</a>
+    </div>
+    <section class="section-1">
+        <div class="content-wrapper-1">
+            <p style="font-size: 4em;"><b>Imagio Flux</b></p>
+            <br>
+            <p>Beyond Vision, Into Creation</p>
+            <br>
+            <span style="padding-right: 10px;">-------</span><a href="#generateimage"><button class="main_button_type">Generate Images</button></a><span style="padding-left: 10px;">-------</span>
+        </div>
+    </section>
+    <section class="section-2" id="aboutus">
+        <div class="content-wrapper-main">
+            <p style="font-size: 4em;"><b>About Us</b></p>
+            <br><br>
+            <p style="max-width: 50em; font-size: 1em;">We are a passionate organization committed to making AI image generation accessible to everyone, empowering individuals and businesses to embrace the transformative potential of artificial intelligence. Guided by our belief in the limitless power of imagination, we offer an advanced, intuitive image generator that brings ideas to life—completely free of cost. Our mission is to democratize cutting-edge technology, fostering creativity and innovation worldwide. Join us on this journey with Artify Flux as we shape the future of creativity together. Contact us at:</p>
+            <br><br>
+            <p style="max-width: 50em;">imagioflux@gmail.com</p>
+            <br>
+        </div>
+    </section>
+    <section class="section-3" id="privacypolicy">
+        <div class="content-wrapper-main">
+            <p style="font-size: 4em;"><b>Privacy Policy</b></p>
+            <br><br>
+            <p style="max-width: 50em; font-size: 1em;">We deeply respect your privacy. All images generated on this platform remain private and are not shared publicly. We do not store any data, including prompts, ensuring your input stays secure. As a free platform, no sign-ups, log-ins, or account creation are required just enter your prompt and receive your image. While you have full creative freedom, you are solely responsible for the content generated. Enjoy your seamless and private creative experience!</p>
+            <br><br>
+            <footer>© Imagio Flux Image Generator. All Rights Reserved.</footer>
+        </div>
+    </section>
+    <section class="section-4" id="promptguide">
+        <div class="content-wrapper-main">
+            <p style="font-size: 4em;"><b>Prompt Guide</b></p>
+            <br><br>
+            <p style="max-width: 50em; font-size: 1em;">Craft prompts using clear, concise sentences with commas to separate details for better clarity. Be specific and focus on the main object or subject, ensuring supporting details complement rather than overshadow it. Avoid overloading the prompt with excessive information, maintain logical flow, and use adjectives sparingly to enhance descriptions without causing confusion. Ensure consistency by avoiding contradictions, provide context when needed, and refine prompts iteratively to achieve the best results.</p>
+        </div>
+    </section>
+    <section class="section-5" id="generations">
+            <div class="generations_modal_content">
+              <span class="flip-button" onclick="flipImage()">Reveal Prompt</span>
+              <br><br>
+              <!-- Image container with the image and text -->
+              <div class="image-container" id="imageContainer">
+                <img src="image_example_5.png" alt="Image" id="image">
+                <div class="text" id="imageText">
+                  A quiet forest path, dappled sunlight filtering through the trees, soft moss covering the ground, a few fallen leaves scattered around, a gentle breeze rustling the branches above, the air fresh and cool, the atmosphere calm and serene.
+                </div>
+              </div>
+              <!-- Next Button -->
+              <span class="next-button" onclick="nextImage()">Next</span>
+            </div>
+    </section>
+    <section class="section-6" id="generateimage">
+        <form>
+            <textarea class="text_area" id="prompt" placeholder="Try 'A realistic cat, walking down a cityscape at night.'" style="resize: none; overflow-y: auto; width:100%;"></textarea>
+            <button class="button_form" id="generate" type="button" disabled>
+              <span>Generate</span>
+            </button>
+            <canvas id="canvas" width="500" height="300"></canvas>
+            <div class="loading-wave">
+              <div class="loading-bar"></div>
+              <div class="loading-bar"></div>
+              <div class="loading-bar"></div>
+              <div class="loading-bar"></div>
+            </div>
+            <button class="button_form" id="download" type="button" disabled>
+              <span>Download</span>
+            </button>
+        </form>
+    </section>
+</body>
+</html>

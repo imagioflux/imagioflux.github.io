@@ -1,0 +1,16 @@
+.content-wrapper-main {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Example styling of the h1 inside the section */
+.section-main h1 {
+    font-size: 3em;
+    text-align: center;
+}
+
+/* Example styling of the p inside the section */
+.section-main p {
+    font-size: 1.2em;
+    text-align: center;
+}
