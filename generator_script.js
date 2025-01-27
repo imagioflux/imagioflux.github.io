@@ -155,13 +155,19 @@ generateButton.addEventListener("click", async () => {
 
       console.log("Image generated and drawn to canvas.");
       enableInteractions(); // Re-enable interactions
+
+      promptInput.value = ""; // Clear the input AFTER the image is loaded
+      updateButtonState(); // Update button state AFTER clearing the input
     };
 
     generatedImageUrl = URL.createObjectURL(imageBlob);
     image.src = generatedImageUrl;
     downloadButton.disabled = false;
 
-    promptInput.value = ""; // Clear the prompt input field
+    // Clear the prompt input field only if image generation is successful
+    if (generatedImageUrl) {
+      promptInput.value = "";
+    }
     updateButtonState(); // Re-check the button state
   } catch (error) {
     console.error("Error generating image:", error);
