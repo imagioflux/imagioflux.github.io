@@ -128,3 +128,29 @@ footer {
     margin-top: auto;
     width: 100%;
 }
+
+.tempo_loader_box {
+    width: 90%; /* Responsive width (takes 90% of the parent container) */
+    max-width: 500px; /* Maximum width for larger screens */
+    visibility: hidden;
+    height: auto; /* Height adjusts based on content or viewport */
+    min-height: 18em; /* Minimum height for small screens */
+    max-height: 44vh; /* Maximum height for larger screens */
+    display: flex; /* Enable flexbox layout */
+    position: absolute;
+    align-items: center; /* Vertically center-align items */
+    justify-content: center; /* Horizontally center-align items */
+    bottom: 4em; /* Adds spacing from the bottom */
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%); /* Adjusts for exact horizontal centering */
+    padding: 20px; /* Add some padding for better spacing inside the box */
+    box-sizing: border-box; /* Ensures padding is included in the width/height calculation */
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    .tempo_loader_box {
+        bottom: 4em; /* Reduce spacing from the bottom on smaller screens */
+        min-height: 10em; /* Smaller minimum height for small screens */
+    }
+}
