@@ -5,7 +5,7 @@ generateButton.classList.add("button_form");
 downloadButton.classList.add("button_form");
 const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
-const loader = document.querySelector(".loading-wave");
+const loader = document.querySelector(".tempo_loader_box");
 const initialMessage = "This area displays the generated image.";
 
 let generatedImageUrl = null; // To store the image URL for downloading
