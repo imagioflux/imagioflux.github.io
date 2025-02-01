@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="section_main.css">
     <link rel="stylesheet" href="generations_css.css">
     <link rel="stylesheet" href="form.css">
-    <link rel="stylesheet" href="loader_style.css">
+    <link rel="stylesheet" href="rubix_cube_loader_css.css">
 </head>
 <body>
     <script src="main.js" defer></script>
@@ -96,11 +96,39 @@
               <span>Generate</span>
             </button>
             <canvas id="canvas" width="500" height="300"></canvas>
-            <div class="loading-wave">
-              <div class="loading-bar"></div>
-              <div class="loading-bar"></div>
-              <div class="loading-bar"></div>
-              <div class="loading-bar"></div>
+            <div class="tempo_loader_box">
+            <div class="rubix_cube_loader">
+                <div class="rubix_cube_face rubix_cube_front">
+                    <div class="rubix_cube_red"></div><div class="rubix_cube_green"></div><div class="rubix_cube_blue"></div>
+                    <div class="rubix_cube_white"></div><div class="rubix_cube_yellow"></div><div class="rubix_cube_orange"></div>
+                    <div class="rubix_cube_red"></div><div class="rubix_cube_green"></div><div class="rubix_cube_blue"></div>
+                </div>
+                <div class="rubix_cube_face rubix_cube_back">
+                    <div class="rubix_cube_white"></div><div class="rubix_cube_yellow"></div><div class="rubix_cube_orange"></div>
+                    <div class="rubix_cube_red"></div><div class="rubix_cube_green"></div><div class="rubix_cube_blue"></div>
+                    <div class="rubix_cube_white"></div><div class="rubix_cube_yellow"></div><div class="rubix_cube_orange"></div>
+                </div>
+                <div class="rubix_cube_face rubix_cube_right">
+                    <div class="rubix_cube_blue"></div><div class="rubix_cube_red"></div><div class="rubix_cube_green"></div>
+                    <div class="rubix_cube_yellow"></div><div class="rubix_cube_orange"></div><div class="rubix_cube_white"></div>
+                    <div class="rubix_cube_blue"></div><div class="rubix_cube_red"></div><div class="rubix_cube_green"></div>
+                </div>
+                <div class="rubix_cube_face rubix_cube_left">
+                    <div class="rubix_cube_green"></div><div class="rubix_cube_blue"></div><div class="rubix_cube_red"></div>
+                    <div class="rubix_cube_orange"></div><div class="rubix_cube_white"></div><div class="rubix_cube_yellow"></div>
+                    <div class="rubix_cube_green"></div><div class="rubix_cube_blue"></div><div class="rubix_cube_red"></div>
+                </div>
+                <div class="rubix_cube_face rubix_cube_top">
+                    <div class="rubix_cube_yellow"></div><div class="rubix_cube_orange"></div><div class="rubix_cube_white"></div>
+                    <div class="rubix_cube_green"></div><div class="rubix_cube_blue"></div><div class="rubix_cube_red"></div>
+                    <div class="rubix_cube_yellow"></div><div class="rubix_cube_orange"></div><div class="rubix_cube_white"></div>
+                </div>
+                <div class="rubix_cube_face rubix_cube_bottom">
+                    <div class="rubix_cube_orange"></div><div class="rubix_cube_white"></div><div class="rubix_cube_yellow"></div>
+                    <div class="rubix_cube_blue"></div><div class="rubix_cube_red"></div><div class="rubix_cube_green"></div>
+                    <div class="rubix_cube_orange"></div><div class="rubix_cube_white"></div><div class="rubix_cube_yellow"></div>
+                </div>
+            </div>
             </div>
             <button class="button_form" id="download" type="button" disabled>
               <span>Download</span>
