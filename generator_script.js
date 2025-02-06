@@ -35,9 +35,17 @@ function getRandomApiKey() {
   return apiKeys[randomIndex];
 }
 
-// Function to generate a random 20-digit number
+// Function to generate a random 29-character file name with hyphens every 5 characters
 function generateRandomFileName() {
-  return `${Math.floor(Math.random() * 1e20).toString().padStart(20, '0')}.png`;
+  const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+  let result = '';
+  for (let i = 0; i < 29; i++) {
+    if (i > 0 && i % 5 === 0) {
+      result += '-'; // Add a hyphen every 5 characters
+    }
+    result += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return result + '.png';
 }
 
 // Function to display text on the canvas with word wrapping
