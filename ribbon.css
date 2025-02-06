@@ -55,13 +55,21 @@
 
 @media (max-width: 768px) {
     #ribbon {
-        flex-direction: column;
+        flex-direction: row; /* Default horizontal layout */
         align-items: center;
         gap: 0.5em;
+        flex-wrap: wrap; /* Allow wrapping to the next line */
+        justify-content: center; /* Center-align the buttons */
+        padding: 0.5em 0; /* Add vertical padding for spacing */
     }
     #ribbon a {
-        min-width: 100%;
-        padding: 0.5em;
+        min-width: auto; /* Allow buttons to shrink and fit */
+        flex: 1 1 calc(50% - 1em); /* Distribute space for 2 buttons per row */
+        max-width: calc(50% - 1em); /* Limit width to fit 2 buttons per row */
+        padding: 0.3em 0.5em; /* Reduce padding for smaller screens */
+        font-size: 0.8em; /* Decrease font size for smaller screens */
         box-sizing: border-box;
+        text-align: center; /* Ensure text is centered within buttons */
+        white-space: nowrap; /* Prevent text from wrapping to the next line */
     }
 }
