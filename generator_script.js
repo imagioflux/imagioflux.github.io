@@ -37,7 +37,7 @@ function getRandomApiKey() {
 
 // Function to generate a random 29-character file name with hyphens every 5 characters
 function generateRandomFileName() {
-  const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+  const chars = 'abcde0123456789';
   let result = '';
   for (let i = 0; i < 29; i++) {
     if (i > 0 && i % 5 === 0) {
